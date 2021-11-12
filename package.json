@@ -1,0 +1,29 @@
+{
+  "name": "auto-trader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odillner/auto-trader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odillner/auto-trader/issues"
+  },
+  "homepage": "https://github.com/odillner/auto-trader#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "telegraf": "^4.4.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "eslint": "^7.3.1",
+    "nodemon": "^2.0.4"
+  }
+}
