@@ -1,11 +1,14 @@
-const app = require('./app')
-const http = require('http')
+const {Telegraf} = require('telegraf')
+const config = require('./util/config')
 
-const config = require('./utils/config')
-const logger = require('./utils/logger')
+const bot = new Telegraf(config.TELEGRAM_TOKEN)
 
-const server = http.createServer(app)
+bot.start((ctx) => ctx.reply('Welcome'))
 
-server.listen(config.PORT, () => {
-    logger.info(`Server running on port ${config.PORT}`)
-})
+bot.hears('trade', (ctx) => ctx.reply('fuck you'))
+
+bot.launch()
+
+// Enable graceful stop
+process.once('SIGINT', () => bot.stop('SIGINT'))
+process.once('SIGTERM', () => bot.stop('SIGTERM'))

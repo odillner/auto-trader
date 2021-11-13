@@ -1,9 +1,9 @@
 require('dotenv').config()
 
 let PORT = process.env.PORT
-let TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN
+let TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN
 
 module.exports = {
     PORT,
-    TELEGRAM_BOT_TOKEN
+    TELEGRAM_TOKEN
 }
